@@ -8,13 +8,24 @@
             <h1> LOGIN HERE </h1>
             <form >
                 <p>Username</p>
-                <input type="text" name="" placeholder="Enter Username">
+                <input type="text" name="" placeholder="Enter Username" id="email_field">
                 <p>Password</p>
-                <input type="password" name="" placeholder="Enter Password">
-                <input type="submit" value="Login">
+                <input type="password" name="" placeholder="Enter Password" id="password_field">
+                <button onclick="login()" >Login to your Account</button>
                 <a href="#">* Forgot Password ?</a><br>
             </form>
             </div>
+            <script src="index.js"></script>
        </body>
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="/__/firebase/7.19.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+
    </head> 
 </html>
