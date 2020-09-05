@@ -7,22 +7,36 @@ loginButton.addEventListener("click", (e) => {
     e.preventDefault();
     const email = loginForm.username.value;
     const password = loginForm.password.value;
-
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert(errorCode+" "+errorMessage)
-        // ...
-      });
+    const userType= loginForm.User.value;
+    console.log(userType)
+    if(userType=="faculty")
+    {
+      firebase.auth().signInWithEmailAndPassword(email, password).then((success)=>
+      {
+        alert("You have successfully logged in.");
+        location.replace("www.google.com")
+      }).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          alert(errorCode+" "+errorMessage)
+          // ...
+        });
+    }
+    else{
+      if(email=="admin"&& password=="123456")
+      {
+        alert("You have successfully logged in.");
+        location.replace("www.wikipedia.com")
+      }
+    }
+    
 
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           // User is signed in.
-          alert("You have successfully logged in.");
         } else {
           // No user is signed in.
-          alert("You have not logged in")
         }
       });
 
