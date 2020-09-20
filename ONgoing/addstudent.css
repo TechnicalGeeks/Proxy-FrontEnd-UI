@@ -1,41 +1,68 @@
-body {
-    margin: 0 auto;
-    padding: 0;
-    background: linear-gradient(to left, #00AAFF, #00FF6C);
+body{
+    margin : 0;
+    padding : 0;
+    /* background: linear-gradient(to left, #00AAFF, #00FF6C);*/
     background-color: #00FF6C;
     font-family: sans-serif;
 }
 
 header {
-    background-color: aliceblue;
-    margin: 1%;
-    height: 80px;
-    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    border-bottom: 1px solid black;
 }
 
-header img {
+/* header img {
     float: left;
-    width: 8%;
-    height: 80px;
+     width: 8%;
+    height: 80px; 
+} */
+.Institution_logo{
+    border: 1px;
+    padding: 10px 10px 10px 10px;
+    margin-right: auto;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: 20px;
+}
+
+.logo{
+    width: 7vw;
 }
 
 header h1 {
-    border: solid gray;
-    text-align: center;
+    border:1px solid black;
+    /*text-align: center; 
     margin-top: 0%;
     margin-left: 12%;
-    margin-right: 5%;
-    font-size: 6vh;
+    margin-right: 5%;*/
+    margin: auto;
+    font-size: 2vw;
 }
-
+.User{
+    border: 1px;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin: 10px 10px 10px 10px;
+    padding: 5px 25px 5px 25px;
+    cursor: pointer;
+}
+#signout-button{
+    border: none;
+    background-color: rgba(0,0,0,0);
+    font-size: 2vh;
+    cursor: pointer;
+}
 nav {
     border: solid black;
-    background-color: rgb(22, 22, 18);
+    background-color: rgba(0, 0, 0,0.7);
     display: block;
     padding: 2px;
     margin: 1%;
-    margin-top: 0%;
-    height: 28px;
+    height: auto;
 }
 
 nav a {
@@ -43,11 +70,10 @@ nav a {
     text-decoration: none;
     background-color: aliceblue;
     border-radius: 5%;
-    width: 10%;
+    width: auto;
     text-align: center;
     height: auto;
-    font-size: large;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 2vw;
 }
 
 nav a:hover {
@@ -55,17 +81,45 @@ nav a:hover {
     background-color: chocolate;
 }
 
+
 .container {
     margin: 1%;
-    margin-bottom: 2px;
+    margin-bottom: 3%;
     height: 530px;
     border: solid black;
 }
 
-footer {
+/* footer {
     border: solid black;
+    position: sticky;
     margin: 1%;
     margin-top: 0%;
     padding: 0%;
     height: 30px;
+} */
+.footer {
+    height: 3vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    background-color: #80e063; 
+    color: #25384f;
+    font-weight: bolder;
+    font-size: 3vh;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-links>a,
+.footer>div>a {
+    margin: 10px;
+    color: inherit;
+    justify-content: flex-end;
+}
+
+.footer-links>a>i {
+    transform: scale(1.5);
 }

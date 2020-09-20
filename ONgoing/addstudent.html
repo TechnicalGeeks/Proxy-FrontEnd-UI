@@ -8,14 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Addtion</title>
     <link rel="stylesheet" href="addstudent.css">
+
+    <!-- Awesome Fonts Link to StyleSheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <img src="logo.jpg">
-        <p>
-            <h1>PIMPRI CHINCHWAD COLLEGE OF ENGINEERING</h1>
-        </p>
+        <a href="template.html" class="Institution_logo">
+            <img src="logo.jpg" alt="PCCoE" class="logo">
+        </a>        
+        <h1>PIMPRI CHINCHWAD COLLEGE OF ENGINEERING</h1>
+        <details class="User">
+            <summary>User</summary>
+            <button id="signout-button">Signout</button>
+        </details>
     </header>
     <main>
         <nav>
@@ -32,8 +39,23 @@
 
 
     </main>
-    <footer>
-        <p>This Is Footer</p>
+    <footer class="footer">
+        <div class="copyright">
+            <a href="LICENSE" target="_blank">
+                &copy; 2020 technicalgeeks
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="https://facebook.com/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:technicalgeeks20@gmail.com" target="_blank" style="text-decoration: none">
+                <i class="far fa-envelope" ></i>
+            </a>
+        </div>
     </footer>
 
 

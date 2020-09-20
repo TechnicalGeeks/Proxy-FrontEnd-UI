@@ -31,18 +31,18 @@ loginButton.addEventListener("click", (e) => {
         location.replace("template.html")
       }
     }
-    forgotPassword.addEventListener('click',()=>{
-      firebaseAuth.getInstance().auth.sendPasswordResetEmail(email)
-      .addOnCompleteListener(this, OnCompleteListener { task ->
-          if (task.isSuccessful) {
-              Toast.makeText(this, "Reset link sent to your email", Toast.LENGTH_LONG)
-                  .show()
-          } else {
-              Toast.makeText(this, "Unable to send reset mail", Toast.LENGTH_LONG)
-                  .show()
-          }
-      })
-    })
+    // forgotPassword.addEventListener('click',()=>{
+    //   firebaseAuth.getInstance().auth.sendPasswordResetEmail(email)
+    //   .addOnCompleteListener(this, OnCompleteListener { task ->
+    //       if (task.isSuccessful) {
+    //           Toast.makeText(this, "Reset link sent to your email", Toast.LENGTH_LONG)
+    //               .show()
+    //       } else {
+    //           Toast.makeText(this, "Unable to send reset mail", Toast.LENGTH_LONG)
+    //               .show()
+    //       }
+    //   })
+    // })
     
 
       // firebase.auth().onAuthStateChanged(function(user) {
