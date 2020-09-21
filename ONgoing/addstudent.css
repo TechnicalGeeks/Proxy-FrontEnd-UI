@@ -1,6 +1,6 @@
-body{
-    margin : 0;
-    padding : 0;
+body {
+    margin: 0;
+    padding: 0;
     /* background: linear-gradient(to left, #00AAFF, #00FF6C);*/
     background-color: #00FF6C;
     font-family: sans-serif;
@@ -15,12 +15,14 @@ header {
     border-bottom: 1px solid black;
 }
 
+
 /* header img {
     float: left;
      width: 8%;
     height: 80px; 
 } */
-.Institution_logo{
+
+.Institution_logo {
     border: 1px;
     padding: 10px 10px 10px 10px;
     margin-right: auto;
@@ -29,12 +31,12 @@ header {
     width: 20px;
 }
 
-.logo{
+.logo {
     width: 7vw;
 }
 
 header h1 {
-    border:1px solid black;
+    border: 1px solid black;
     /*text-align: center; 
     margin-top: 0%;
     margin-left: 12%;
@@ -42,7 +44,8 @@ header h1 {
     margin: auto;
     font-size: 2vw;
 }
-.User{
+
+.User {
     border: 1px;
     justify-content: flex-end;
     margin-left: auto;
@@ -50,15 +53,17 @@ header h1 {
     padding: 5px 25px 5px 25px;
     cursor: pointer;
 }
-#signout-button{
+
+#signout-button {
     border: none;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     font-size: 2vh;
     cursor: pointer;
 }
+
 nav {
     border: solid black;
-    background-color: rgba(0, 0, 0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: block;
     padding: 2px;
     margin: 1%;
@@ -67,6 +72,8 @@ nav {
 
 nav a {
     display: inline-block;
+    padding: 3px;
+    margin-right: 10px;
     text-decoration: none;
     background-color: aliceblue;
     border-radius: 5%;
@@ -81,13 +88,13 @@ nav a:hover {
     background-color: chocolate;
 }
 
-
 .container {
     margin: 1%;
     margin-bottom: 3%;
     height: 530px;
     border: solid black;
 }
+
 
 /* footer {
     border: solid black;
@@ -97,13 +104,14 @@ nav a:hover {
     padding: 0%;
     height: 30px;
 } */
+
 .footer {
     height: 3vh;
     width: 100%;
     position: fixed;
     bottom: 0;
     padding: 10px;
-    background-color: #80e063; 
+    background-color: #80e063;
     color: #25384f;
     font-weight: bolder;
     font-size: 3vh;
@@ -122,4 +130,71 @@ nav a:hover {
 
 .footer-links>a>i {
     transform: scale(1.5);
+}
+
+.container form {
+    border: solid black;
+    width: 28%;
+    height: 90%;
+    margin: 2%;
+    margin-left: 35%;
+    border-radius: 3%;
+    background-color: #25384f;
+}
+
+.container form img {
+    display: block;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4%;
+    border-radius: 5px;
+    width: 75%;
+    height: 20%;
+}
+
+.container form label {
+    background-color: aqua;
+    display: block;
+    margin: 2% 5% 4% 10%;
+    width: 33%;
+    height: auto;
+    text-align: center;
+    font-size: large;
+    display: inline-block;
+    padding: 1%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    color: rgb(14, 6, 6);
+    border-radius: 5px;
+}
+
+.container input[type="text"],
+input[type="password"] {
+    background-color: aqua;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    width: 40%;
+    text-align: center;
+    font-size: large;
+    color: rgb(83, 36, 192);
+    display: inline-block;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: rgb(90, 75, 75);
+}
+
+.container input[type="submit"] {
+    background-color: rgb(193, 238, 87);
+    display: block;
+    width: 50%;
+    height: 35px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    font-size: larger;
 }
