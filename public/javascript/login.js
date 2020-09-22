@@ -15,7 +15,7 @@ loginButton.addEventListener("click", (e) => {
       firebase.auth().signInWithEmailAndPassword(email, password).then((success)=>
       {
         alert("You have successfully logged in.");
-        location.replace("template.html")
+        location.replace("Admin.html")
       }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -28,7 +28,7 @@ loginButton.addEventListener("click", (e) => {
       if(email=="admin"&& password=="123456")
       {
         alert("You have successfully logged in.");
-        location.replace("template.html")
+        location.replace("Admin.html")
       }
     }
     // forgotPassword.addEventListener('click',()=>{
