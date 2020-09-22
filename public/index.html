@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="">
+    <title>Proxy | Login</title>
 </head>
 <body>
+    <div class="container">
+        <form action="" id="form" class="form">
+            <h2>Login Here</h2>
+            <div class="form-control" id="formControl">
+                <label for="user" style="display: inline;">Login as : </label>
+                <select name="" id="User">
+                    <option value="admin">Administrator</option>
+                    <option value="faculty">Faculty</option>
+                </select>
+            </div>
+            
+            <div class="form-control" id="formControl">
+                <label for="username">Username : </label>
+                <input type="email" id="username" placeholder="Enter Username">
+            </div>
+            <div class="form-control" id="formControl">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+            <button id="login-form-submit" type="submit">Login</button>
+        </form>
+    </div>
+    <!-- <div class="container">
     <div class="LoginBox" >
         <img  src="images/Login_logo.png" class="avatar">
         <h1> LOGIN HERE </h1>
@@ -25,8 +50,9 @@
             <a href="#" id="forgot-password">* Forgot Password ?</a><br>
         </form>
      </div>
+    </div>
      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
-     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     The core Firebase JS SDK is always required and must be listed first -->
      <script src="/__/firebase/7.19.1/firebase-app.js"></script>
  
      <!-- TODO: Add SDKs for Firebase products that you want to use

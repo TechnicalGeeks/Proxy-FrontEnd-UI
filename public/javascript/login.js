@@ -6,9 +6,9 @@ const forgotPassword= document.getElementById("forgot-password");
 
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
-    const email = loginForm.username.value;
-    const password = loginForm.password.value;
-    const userType= loginForm.User.value;
+    const email = form.username.value;
+    const password = form.password.value;
+    const userType= form.User.value;
     console.log(userType)
     if(userType=="faculty")
     {
