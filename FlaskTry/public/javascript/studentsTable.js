@@ -1,7 +1,4 @@
-
-
-
-var config ={
+var config = {
     "apiKey": "AIzaSyAC4EU24xjMQKXP-41I1TnRDIT4KTN7CV8",
     "authDomain": "proxy-detection-1df22.firebaseapp.com",
     "databaseURL": "https://proxy-detection-1df22.firebaseio.com",
@@ -13,59 +10,62 @@ var config ={
 }
 firebase.initializeApp(config);
 
-const preObject=document.getElementById('object');
-var table=document.getElementById('student-table')
-var headings=[];
+const preObject = document.getElementById('object');
+var table = document.getElementById('student-table')
+
+var headings = [];
 for (let index = 0; index < 5; index++) {
-    headings.push(document.getElementById('subject'+String(index+1)));
-    
+    headings.push(document.getElementById('subject' + String(index + 1)));
+
 }
-var content='';
 
 
 
-function retrieve(){
+function retrieve() {
+
     console.log('test')
-    var IClass=document.getElementById('year').value;
-    var IDiv=document.getElementById('div').value;
+    var IClass = document.getElementById('year').value;
+    var IDiv = document.getElementById('div').value;
     for (let index = 0; index < 5; index++) {
-        headings.push(document.getElementById('subject'+String(index+1)));
-        
+        headings.push(document.getElementById('subject' + String(index + 1)));
+
     }
     console.log(IClass);
     console.log(IDiv);
 
-    const dbRefObject=firebase.database().ref().child(IClass);
-    
-    dbRefObject.on('value', snap=> {
-        console.log(snap.val())
-        var data=snap.val();
-        // console.log(data[IDiv]['18'])
-        var students=Object.keys(data[IDiv]);
-        console.log(students);
-    
-        var subjects=Object.keys(data[IDiv][students[0]])
-        console.log(subjects);
-        for (let index = 0; index < headings.length; index++) {
-            headings[index].innerText=subjects[index];
+    const dbRefObject = firebase.database().ref().child(IClass);
+
+    dbRefObject.on('value', snap => {
+            console.log(snap.val())
+            var data = snap.val();
+            // console.log(data[IDiv]['18'])
+            var students = Object.keys(data[IDiv]);
+            console.log(students);
+
+            var subjects = Object.keys(data[IDiv][students[0]])
+            console.log(subjects);
+            for (let index = 0; index < headings.length; index++) {
+                headings[index].innerText = subjects[index];
+            }
+            var content = '';
+            table.innerHTML += content;
+
+            for (let index = 0; index < students.length; index++) {
+                content += '<tr>';
+                content += '<td>' + students[index] + '</td>';
+                content += '<td>' + data[IDiv][students[index]][subjects[0]] + '</td>';
+                content += '<td>' + data[IDiv][students[index]][subjects[1]] + '</td>';
+                content += '<td>' + data[IDiv][students[index]][subjects[2]] + '</td>';
+                content += '<td>' + data[IDiv][students[index]][subjects[3]] + '</td>';
+                content += '<td>' + data[IDiv][students[index]][subjects[4]] + '</td>';
+                content += '</tr>';
+
+            }
+            table.innerHTML += content;
         }
-        
-        for (let index = 0; index < students.length; index++) {
-            content +='<tr>';
-            content += '<td>' + students[index]+ '</td>';
-            content += '<td>' + data[IDiv][students[index]][subjects[0]]+ '</td>';
-            content += '<td>' + data[IDiv][students[index]][subjects[1]] + '</td>';
-            content += '<td>' + data[IDiv][students[index]][subjects[2]] + '</td>';
-            content += '<td>' + data[IDiv][students[index]][subjects[3]] + '</td>';
-            content += '<td>' + data[IDiv][students[index]][subjects[4]]+ '</td>';
-            content += '</tr>';
-            
-        }
-        table.innerHTML+=content;
-    
-    
-    });
-    
+
+    );
+
 }
 
 
@@ -76,7 +76,7 @@ function retrieve(){
 // var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
 // starCountRef.on('value', function(snapshot) {
 //   updateStarCount(postElement, snapshot.val());
-  
+
 //   var userId = firebase.auth().currentUser.uid;
 //   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
 //   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
