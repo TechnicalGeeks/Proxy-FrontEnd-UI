@@ -22,6 +22,7 @@ document.getElementById('download').onclick = function download_att() {
     var csv = 'ATTENDANCE REPORT , DIVISION - \n';
     var data = []
     var subjects = []
+    var count = 0;
     document.write("Download Pressed")
     database.ref('/' + IClass + '/' + IDiv).once('value', function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
@@ -32,22 +33,28 @@ document.getElementById('download').onclick = function download_att() {
             var childData = childSnapshot.val();
             var sub = Object.values(childData)
             var sub_name = Object.keys(childData)
-            subjects = sub_name;
+
             console.log(sub_name)
             document.write(childKey + "Subject ttendance " + sub + '<br>')
             stud.push(childKey)
             for (index = 0; index < sub.length; index++) {
+                if (count == 0) {
+                    subjects.unshift("Roll_number")
+                    subjects.push(sub_name)
+                    count += 1;
+                }
                 document.write('br>' + sub_name[index] + "-------" + sub[index] + " - - ")
                 stud.push(sub[index])
             }
             data.push(stud)
-
         });
+
+        data.unshift(subjects)
         document.write("Outside Previous Student" + '<br>' + data)
         data.forEach(function(row) {
             csv += row.join(',');
             csv += "\n";
-            console.log(csv);
+            console.log(subjects);
 
         });
 
