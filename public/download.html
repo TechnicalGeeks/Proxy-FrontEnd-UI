@@ -20,13 +20,13 @@
 
 <body>
     <header>
-        <a href="template.html" class="Institution_logo">
+        <a href="Admin.html" class="Institution_logo">
             <img src="images/logo.jpg" alt="PCCoE" class="logo">
         </a>
         <h1>PIMPRI CHINCHWAD COLLEGE OF ENGINEERING</h1>
         <details class="User">
-            <summary>User</summary>
-            <button id="signout-button">Signout</button>
+            <summary id="user">User</summary>
+            <input type="button" onclick="signOut()" value="Sign Out">
         </details>
     </header>
     <nav>
@@ -39,6 +39,7 @@
 
         <div class="container">
             <form a id='form' class='form'>
+                <h2>Download Class Report</h2>
                 <div class="form-control">
                     <label for="year">Year</label>
                     <select id='year' name="year" class="select">
@@ -100,6 +101,7 @@
     <!-- <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
 
+    <script src="javascript/template.js"></script>
     <script src="javascript/download.js"></script>
 
 
